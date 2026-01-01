@@ -1,6 +1,6 @@
 module github.com/otiai10/amesh
 
-go 1.22
+go 1.24
 
 require (
 	github.com/otiai10/gat v1.0.0

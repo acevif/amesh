@@ -1,3 +1,5 @@
 vendor
 release
 coverage.txt
+
+.claude/settings.local.json
