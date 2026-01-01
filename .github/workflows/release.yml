@@ -26,7 +26,7 @@ jobs:
     - name: Get dependencies
       run: go get -v -t -d ./...
     - name: Build
-      run: go build -v -o amesh .
+      run: go build -v -ldflags "-X main.version=${{ env.RELEASE_TAG }}" -o amesh .
     - name: Zip
       id: zip-file
       run: |

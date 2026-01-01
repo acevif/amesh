@@ -7,13 +7,24 @@ import (
 	_ "image/gif"
 	_ "image/jpeg"
 	"os"
+	"runtime/debug"
 
 	"github.com/otiai10/amesh/cli"
 	"github.com/otiai10/amesh/lib/tenki"
 	"github.com/otiai10/gat/render"
 )
 
-const version = "v1.4.0"
+var version = ""
+
+func getVersion() string {
+	if version != "" {
+		return version // -ldflags で設定された場合
+	}
+	if info, ok := debug.ReadBuildInfo(); ok && info.Main.Version != "" {
+		return info.Main.Version // go install で取得できる場合
+	}
+	return "dev"
+}
 
 var (
 	geo, mask bool
@@ -37,7 +48,7 @@ func setup() {
 	flag.BoolVar(&usepix, "p", false, "iTermであってもピクセル画で表示")
 	flag.Float64Var(&scale, "s", 1.2, "表示拡大倍率")
 	flag.Usage = func() {
-		fmt.Fprintf(os.Stderr, "東京アメッシュをCLIに表示するコマンドです。(%v)\n利用可能なオプション:\n", version)
+		fmt.Fprintf(os.Stderr, "東京アメッシュをCLIに表示するコマンドです。(%s)\n利用可能なオプション:\n", getVersion())
 		flag.PrintDefaults()
 	}
 	flag.Parse()
