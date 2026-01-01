@@ -49,7 +49,10 @@ func main() {
 
 	renderer := render.GetDefaultRenderer()
 	if usepix {
-		renderer = &render.CellGrid{}
+		renderer = &render.CellGrid{
+			HalfBlock: true,
+			TrueColor: true,
+		}
 	}
 	renderer.SetScale(scale)
 	subcommand := flag.Arg(0)
