@@ -3,7 +3,7 @@ module github.com/otiai10/amesh
 go 1.24
 
 require (
-	github.com/otiai10/gat v1.0.0
+	github.com/otiai10/gat v1.1.0
 	github.com/otiai10/mint v1.6.3
 	github.com/otiai10/opengraph v1.1.3
 	golang.org/x/net v0.27.0
