@@ -1,5 +1,4 @@
-amesh
-==========
+# amesh
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/otiai10/amesh.svg)](https://pkg.go.dev/github.com/otiai10/amesh)
 [![Actions Status](https://github.com/otiai10/amesh/workflows/Go/badge.svg)](https://github.com/otiai10/amesh/actions?query=workflow%3AGo)
@@ -11,9 +10,11 @@ amesh
 みんな大好き東京アメッシュ http://tokyo-ame.jwa.or.jp/
 をCLIで表示
 
-| iTerm | Sixel | default |
-|:-----:|:-----:|:-------:|
-| <img width="320px" src="https://user-images.githubusercontent.com/931554/39689648-8e8520b4-5212-11e8-87e2-b0bad05f530c.png"> | <img width="320px" src="https://user-images.githubusercontent.com/10111/39798686-7d505878-539c-11e8-8671-322f495824cb.png"> | <img width="320px" src="https://cloud.githubusercontent.com/assets/931554/11038037/5940e5be-8744-11e5-94d9-4b0bc7b2f55f.png"> |
+| 描画方式 | 対応ターミナル | 使用感 |
+|:------:|:------:|:------:|
+| iTerm2<br>Inline Images | iTerm2 | <img width="320px" src="./.github/assets/iterm.png"> |
+| Sixel | WezTerm, mlterm,<br>その他Sixel対応 | <img width="320px" src="./.github/assets/sixel.png"> |
+| デフォルト<br>（文字描画） | すべてのターミナル | <img width="320px" src="./.github/assets/default.png"> |
 
 
 # Install
@@ -52,6 +53,6 @@ amesh osaka
 
 # Slackで @amesh って言うとアメッシュの画像出すbot
 
-<img width="40%" src="https://user-images.githubusercontent.com/931554/44345661-e5c65a00-a4ce-11e8-96a3-a024b8651183.png" >
+<img width="40%" src="./.github/assets/slack-bot.png">
 
 詳しくは、 https://github.com/otiai10/amesh-bot
