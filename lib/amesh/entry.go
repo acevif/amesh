@@ -117,7 +117,7 @@ func (entry *Entry) getImageFor(imgurl string, client *http.Client) (image.Image
 	}
 	defer res.Body.Close()
 	if res.StatusCode >= 400 {
-		return nil, fmt.Errorf(res.Status)
+		return nil, fmt.Errorf("unexpected status: %s", res.Status)
 	}
 	img, _, err := image.Decode(res.Body)
 	cache[imgurl] = img
